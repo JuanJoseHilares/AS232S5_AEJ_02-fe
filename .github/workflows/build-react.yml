@@ -31,4 +31,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/frontend-react:latest
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/frontend-react-test:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/frontend-react-test:${{ github.sha }}
